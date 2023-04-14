@@ -74,10 +74,10 @@ func main() {
 
 	select {
 	case responseDaApiCep := <-channelApiCep:
-		fmt.Printf("Resposta API CEP: %+v\n", responseDaApiCep)
+		fmt.Printf("A resposta da API CEP foi mais rápida: %+v\n", responseDaApiCep)
 
 	case responseDaViaCep := <-channelViaCep:
-		fmt.Printf("Resposta Via CEP: %+v \n", responseDaViaCep)
+		fmt.Printf("A resposta da Via CEP foi mais rápida: %+v \n", responseDaViaCep)
 
 	case <-time.After(time.Second):
 		fmt.Println("Request timeout")
